@@ -1,0 +1,489 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.header-contact .phone {
+    font-size: 16px;
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 120px 0 80px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgb(255,87,34);stop-opacity:0.3" /><stop offset="100%" style="stop-color:rgb(63,81,181);stop-opacity:0.1" /></radialGradient></defs><circle cx="50" cy="50" r="40" fill="url(%23grad1)" /></svg>') center/cover;
+    opacity: 0.3;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-person {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,87,34,0.8) 0%, rgba(63,81,181,0.6) 70%);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-person::after {
+    content: '💪';
+    font-size: 120px;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.training-photo {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.training-photo::after {
+    content: '🏋️‍♀️';
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+/* Advantages Section */
+.advantages {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.advantages-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.advantages-text h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.advantages-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.team-photo {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.team-photo::after {
+    content: '👥';
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+/* Motivation Section */
+.motivation {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.motivation-content p {
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 40px 30px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    margin-bottom: 25px;
+}
+
+.icon-placeholder {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+
+.service-item:nth-child(1) .icon-placeholder::after {
+    content: '🏆';
+}
+
+.service-item:nth-child(2) .icon-placeholder::after {
+    content: '❤️';
+}
+
+.service-item:nth-child(3) .icon-placeholder::after {
+    content: '🔥';
+}
+
+.service-item:nth-child(4) .icon-placeholder::after {
+    content: '👨‍💼';
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #3498db;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.map-placeholder {
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bdc3c7;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo-text {
+        font-size: 24px;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+        min-height: 500px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-person {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .hero-person::after {
+        font-size: 80px;
+    }
+    
+    .about-content,
+    .advantages-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-text h2,
+    .advantages-text h2 {
+        font-size: 28px;
+    }
+    
+    .training-photo,
+    .team-photo {
+        height: 250px;
+    }
+    
+    .motivation-content p {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .service-item {
+        padding: 30px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-person {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .about-text h2,
+    .advantages-text h2 {
+        font-size: 24px;
+    }
+    
+    .motivation-content p {
+        font-size: 18px;
+    }
+    
+    .service-item h3 {
+        font-size: 20px;
+    }
+    
+    .training-photo,
+    .team-photo {
+        height: 200px;
+    }
+    
+    .training-photo::after,
+    .team-photo::after {
+        font-size: 60px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text h1 {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-person {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
